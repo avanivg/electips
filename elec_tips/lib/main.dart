@@ -4,6 +4,7 @@ import 'package:elec_tips/signup.dart';
 import 'package:elec_tips/trips.dart';
 import 'package:elec_tips/leaderboard.dart';
 import 'package:elec_tips/efficiency.dart';
+import 'package:elec_tips/navbar.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
@@ -27,6 +28,8 @@ void main() async {
       '/leaderboard': (context) => LeaderboardPage(),
       '/signup': (context) => SignupPage(),
       '/efficiency': (context) => EfficiencyPage(),
+      '/navbar': (context) => NavbarPage(),
+
     },
   ));
 }

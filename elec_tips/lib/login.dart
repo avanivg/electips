@@ -30,7 +30,7 @@ class _LoginPageState extends State<LoginPage> {
                 Row(
                   children: [
                     //mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    ElevatedButton(child: Text('Sign Up'),
+                    ElevatedButton(child: Text('Log in'),
                         onPressed: () async {
                           await Firebase.initializeApp();
                           await FirebaseAuth.instance.createUserWithEmailAndPassword(
@@ -39,7 +39,8 @@ class _LoginPageState extends State<LoginPage> {
                           );
                           setState(() {
                           });
-                        }),
+                        }
+                        ),
                     ElevatedButton(child: Text('Sign In'),
                         onPressed: () async {
                           await FirebaseAuth.instance.signInWithEmailAndPassword(
@@ -48,12 +49,14 @@ class _LoginPageState extends State<LoginPage> {
                           );
                           setState(() {
                           });
+
                         }),
                     ElevatedButton(child: Text('Log out'),
                       onPressed: () async {
                         await FirebaseAuth.instance.signOut();
                         setState(() {
                         });
+                        Navigator.pushNamed(context, '/navbar');
                       })
                   ]
 
