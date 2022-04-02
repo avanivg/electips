@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "791602728992",
+    "project_id": "electips-c1cbd",
+    "storage_bucket": "electips-c1cbd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:791602728992:android:c16e538f01ed88a30aec45",
+        "android_client_info": {
+          "package_name": "com.example.elec_tips"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "791602728992-l59ur8l80kan1uepbt89oqsraed8bkmt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlJI6RfoVL6S24klFAopEXMYKFfKwMuuk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "791602728992-l59ur8l80kan1uepbt89oqsraed8bkmt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
