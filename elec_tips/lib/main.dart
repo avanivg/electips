@@ -6,7 +6,7 @@ import 'package:elec_tips/leaderboard.dart';
 import 'package:elec_tips/efficiency.dart';
 
 void main() => runApp(MaterialApp(
-  initialRoute: '/login', //change route to '/' when done with app so that loading screen works
+  //initialRoute: '/login', //change route to '/' when done with app so that loading screen works
   home: LoginPage(),
   routes: {
     '/login': (context) => LoginPage(),
