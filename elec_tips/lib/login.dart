@@ -20,40 +20,60 @@ class _LoginPageState extends State<LoginPage> {
 
     return Scaffold(
 
-      backgroundColor: const Color.fromARGB(255, 220, 233, 196),
+      backgroundColor: const Color.fromARGB(255, 88, 89, 91),
 
       // appBar: AppBar(
       //     title: Text('User is (Logged ' + (user == null ? 'out' : 'in') + ')'),
       // ),
 
       body: Container(
-        margin: EdgeInsets.fromLTRB(50, 50, 50, 50),
+        margin: EdgeInsets.fromLTRB(30, 25, 30, 50),
 
         child: Stack(
           children: <Widget>[
             Column(
                 children:<Widget>[
-                  SizedBox(height: 50),
+
+                  SizedBox(height: 30),
+
+                  //Image.asset('assets/images/logo2.png'),
 
                   Container(
                     child: Align(
-                      child: Text("Welcome back!",
-                          style: TextStyle(color: Color.fromARGB(255, 28, 49, 68), fontSize: 30, fontFamily: "Quicksand"),
-                          textAlign: TextAlign.left),
-                    ),
+                    child: Text("Welcome back!",
+                        style: TextStyle(color: Color.fromARGB(255, 255, 255, 255), fontSize: 30, fontFamily: "Martel", fontWeight: FontWeight.bold, ),
+                        textAlign: TextAlign.left ),
+
+
                   ),
+
+
+                    height: 100,
+                  //   decoration: new BoxDecoration(
+                  //     shape: BoxShape.rectangle,
+                  //     color: Colors.black,
+                  //     borderRadius: BorderRadius.all(Radius.circular(20.0),
+                  //
+                  //
+                  //   ),
+                  //
+                  //
+                  // )
+                  ),
+
+
 
                 ]),
             Column(
               children: <Widget>[
 
-                SizedBox(height: 170),
+                SizedBox(height: 210),
 
                 Container(
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: Text("Username:",
-                        style: TextStyle(color: Color.fromARGB(255, 28, 49, 68), fontSize: 24, fontFamily: "Quicksand"),
+                        style: TextStyle(color: Color.fromARGB(255, 255, 255, 255), fontSize: 24, fontFamily: "Martel"),
                         textAlign: TextAlign.left),
                   ),
                 ),
@@ -61,9 +81,11 @@ class _LoginPageState extends State<LoginPage> {
                 SizedBox(height: 10),
 
                 TextField(controller: emailController,
-                  style: TextStyle(height: 0.75),
+                  style: TextStyle(height: 0.75,
+                      fontFamily: "Martel"
+                  ),
                   decoration: InputDecoration(
-                    fillColor: Color.fromARGB(255, 254, 246, 215),
+                    fillColor: Color.fromARGB(255, 255, 255, 255),
                     isDense: true,
                     isCollapsed: true,
                     contentPadding: EdgeInsets.all(20.0),
@@ -81,7 +103,7 @@ class _LoginPageState extends State<LoginPage> {
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: Text("Password:",
-                        style: TextStyle(color: Color.fromARGB(255, 28, 49, 68), fontSize: 24, fontFamily: "Quicksand"),
+                        style: TextStyle(color: Color.fromARGB(255, 255, 255, 255), fontSize: 24, fontFamily: "Martel"),
                         textAlign: TextAlign.left),
                   ),
                 ),
@@ -91,7 +113,7 @@ class _LoginPageState extends State<LoginPage> {
                 TextField(controller: passwordController,
                   style: TextStyle(height: 0.75),
                   decoration: InputDecoration(
-                    fillColor: Color.fromARGB(255, 254, 246, 215),
+                    fillColor: Color.fromARGB(255, 255, 255, 255),
                     isDense: true,
                     isCollapsed: true,
                     contentPadding: EdgeInsets.all(20.0),
@@ -108,7 +130,7 @@ class _LoginPageState extends State<LoginPage> {
                 Row(
                     children: [
 
-                      Text("New? ", style: TextStyle(color: Color.fromARGB(255, 28, 49, 68),)),
+                      Text("New? ", style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontFamily: "Martel")),
                       GestureDetector(
                         onTap: () {
                           Navigator.push(
@@ -118,7 +140,7 @@ class _LoginPageState extends State<LoginPage> {
 
                         },
                         child:  Text("Create account",
-                          style: TextStyle(decoration: TextDecoration.underline, color: Color.fromARGB(255, 28, 49, 68),
+                          style: TextStyle(decoration: TextDecoration.underline, fontFamily: "Martel", color: Color.fromARGB(255, 255, 255, 255),
 
                           ),
                         ),
@@ -140,13 +162,14 @@ class _LoginPageState extends State<LoginPage> {
                     children: [
                       //mainAxisAlignment: MainAxisAlignment.spaceAround,
                       ElevatedButton(
-                          child: Text('Log in'),
+                          child: Text('Log in',
+                          style: TextStyle(fontFamily: "Martel" ,color: Color.fromARGB(255, 255, 255, 255), fontSize: 20, fontWeight: FontWeight.bold )),
                           style: ElevatedButton.styleFrom(
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(20)
                             ),
-                            primary: const Color.fromARGB(255, 28, 49, 68),
-                            fixedSize: const Size(290, 40),
+                            primary: const Color.fromARGB(255, 176, 7, 21),
+                            fixedSize: const Size(330, 50),
                           ),
                           onPressed: () async {
                             Navigator.pushNamed(context, '/navbar');
