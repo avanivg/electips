@@ -50,26 +50,6 @@ class _EfficiencyPageState extends State<EfficiencyPage> {
           ),
       ),
       ),
-             /*Container(
-                margin: const EdgeInsets.only(right: 50, left: 50),
-                padding: const EdgeInsets.all(15),
-                  alignment: Alignment( 0.0, 4.0),
-                child: TextField(
-                    maxLines: 1,
-                    decoration: InputDecoration(
-                        //contentPadding: const EdgeInsets.symmetric(horizontal: 40.0),
-                      isDense: true,
-                        isCollapsed: true,
-                        contentPadding: EdgeInsets.all(15.0),
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10.0)
-                      ),
-                        filled: true,
-                        fillColor: const Color.fromARGB(255, 254, 246, 215),
-                        hintText: "Choose location"),
-                  enabled: true,
-                ),
-                ),*/
               Container(
                 margin: const EdgeInsets.only(right: 50, left: 50),
                 padding: const EdgeInsets.all(15),

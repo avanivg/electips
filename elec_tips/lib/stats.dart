@@ -1,7 +1,5 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_core/firebase_core.dart';
-
 class StatsPage extends StatefulWidget {
   const StatsPage({Key? key}) : super(key: key);
 
@@ -9,7 +7,7 @@ class StatsPage extends StatefulWidget {
   _StatsPageState createState() => _StatsPageState();
 }
 
-class _StatsPageState extends State<StatsPage> {
+class _StatsPageState extends State<StatsPage>  {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,118 +19,124 @@ class _StatsPageState extends State<StatsPage> {
               children: <Widget>[
                 const SizedBox(height: 50),
                 Container(
-                  padding: const EdgeInsets.all(15),
-                  child: const Text(
-                    'Here are your efficiency stats: ',
-                    style: TextStyle(fontSize: 25),
-                  ),
-                ),
-                Container(
-                  //current location
-                  margin: const EdgeInsets.only(right: 50, left: 50),
-                  padding: const EdgeInsets.all(15),
-                  alignment: const Alignment(2.0, 3.0),
-                  child: TextField(
-                    enabled: true,
-                    decoration: InputDecoration(
-                        contentPadding: const EdgeInsets.all(15.0),
-                        border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10.0)),
-                        filled: true,
-                        fillColor: const Color.fromARGB(255, 254, 246, 215),
-                        hintText: 'Trip name'),
-                  ),
-                ),
-                /*Container(
-                margin: const EdgeInsets.only(right: 50, left: 50),
-                padding: const EdgeInsets.all(15),
-                  alignment: Alignment( 0.0, 4.0),
-                child: TextField(
-                    maxLines: 1,
-                    decoration: InputDecoration(
-                        //contentPadding: const EdgeInsets.symmetric(horizontal: 40.0),
-                      isDense: true,
-                        isCollapsed: true,
-                        contentPadding: EdgeInsets.all(15.0),
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10.0)
-                      ),
-                        filled: true,
-                        fillColor: const Color.fromARGB(255, 254, 246, 215),
-                        hintText: "Choose location"),
-                  enabled: true,
-                ),
-                ),*/
+                    padding: const EdgeInsets.all(15),
+                    child: Center(
+                      child: const Text(
 
+                        'Here are your efficiency stats: ',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(fontSize: 25, fontFamily: "Martel"),
+
+                      ),
+                    )
+
+                ),
                 Container(
                   margin: const EdgeInsets.only(right: 50, left: 50),
                   padding: const EdgeInsets.all(15),
-                  alignment: Alignment(0.0, 5.0),
-                  child: TextField(
-                    maxLines: 1,
-                    decoration: InputDecoration(
-                        contentPadding: EdgeInsets.all(15.0),
-                        border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10.0)),
-                        filled: true,
-                        fillColor: const Color.fromARGB(255, 254, 246, 215),
-                        hintText: "Trip distance in miles"),
-                    enabled: true,
+                  alignment: Alignment.topLeft,
+                  child: Stack(
+                    children: const [
+                      Align(
+                          alignment: Alignment(-.5, -.6),
+                          child: Text(
+                            "Ideal speed... ",
+                            style: TextStyle(fontSize: 19, fontFamily: "Martel"),
+                          )
+                      ),
+                      Align(
+                          alignment: Alignment(0, .5),
+                          child: TextField(
+                            decoration: InputDecoration(
+                              contentPadding: EdgeInsets.all(15.0),
+                              border: InputBorder.none,
+                              hintText: "48 mph",
+                              hintStyle: TextStyle(
+                                  fontSize: 21, fontFamily: "Martel", color: Color.fromARGB(255, 28, 49, 68)
+                              ),
+                            ),
+
+                            enabled: true,
+                          )),
+                    ],
                   ),
+                  width: 160.0,
+                  height: 160.0,
+                  decoration: const BoxDecoration(
+                      color: Color.fromARGB(255, 254, 246, 215),
+                      shape: BoxShape.rectangle,
+                      borderRadius: BorderRadius.only(
+                          topRight: Radius.circular(150),
+                          bottomRight: Radius.circular(150),
+                          bottomLeft: Radius.circular(150))),
                 ),
-                ElevatedButton(
-                    child: Text('Calculate Stats'),
-                    onPressed: () {
-                      Navigator.pushNamed(context, '/stats');
-                      setState(() {});
-                    }),
+                Container(
+                  margin: const EdgeInsets.only(right: 50, left: 50, top: 30),
+                  padding: const EdgeInsets.all(15),
+                  alignment: Alignment.centerLeft,
+                  child: Stack(
+                    children: const [
+                      Align(
+                        alignment: Alignment.topCenter,
+                        child: Text(
+                          "Efficiency points... ",
+                          style: TextStyle(fontSize: 20, fontFamily: "Martel"),
+                        ),
+                      ),
+                      Align(
+                          alignment: Alignment(0, .5),
+                          child: TextField(
+                            decoration: InputDecoration(
+                              contentPadding: EdgeInsets.all(15.0),
+                              border: InputBorder.none,
+                              hintText: "70 points",
+                              hintStyle: TextStyle(
+                                  fontSize: 21, fontFamily: "Martel", color: Color.fromARGB(255, 28, 49, 68)
+                              ),
+                            ),
+
+                            enabled: true,
+                          )),
+                    ],
+                  ),
+                  width: 160.0,
+                  height: 160.0,
+                  decoration: const BoxDecoration(
+                      color: Color.fromARGB(255, 254, 246, 215),
+                      shape: BoxShape.rectangle,
+                      borderRadius: BorderRadius.only(
+                          topRight: Radius.circular(150),
+                          bottomRight: Radius.circular(150),
+                          bottomLeft: Radius.circular(150))),
+                ),
+                Container(
+                    margin: const EdgeInsets.only(top: 50.0),
+                    child: SizedBox(
+                      width: 120,
+                      height: 60,
+                      child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(20)
+                            ),
+                            primary: const Color.fromARGB(255, 176, 7, 21),
+                          ),
+                          child: const Text('Add trip',
+                              style: TextStyle(
+                                  fontSize: 21, fontFamily: "Martel", color: Color.fromARGB(255,255,255,255)
+                              )),
+
+                          onPressed: () {
+                            setState(() {});
+                          }),
+                    )
+
+                )
               ],
             ),
-            /*
-            TextField(
-
-              maxLines: 1,
-              decoration: InputDecoration(
-                //contentPadding: EdgeInsets.all(15.0),
-                  border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10.0)
-                  ),
-                  filled: true,
-                  fillColor: const Color.fromARGB(255, 254, 246, 215),
-                  hintText: "Ideal Speed"),
-            ),
-            Column( //ideal speed
-                  children:/* <Widget>*/[
-                   // const SizedBox(height: 10),
-                    Row (
-                     children: /*<Widget>*/[/*
-                     Container(
-                        margin: const EdgeInsets.only(right: 50, left: 50),
-                        padding: const EdgeInsets.all(15),
-                        alignment: Alignment( 0.0, 5.0),*/
-                        TextField(
-
-                            maxLines: 1,
-                            decoration: InputDecoration(
-                            //contentPadding: EdgeInsets.all(15.0),
-                            border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(10.0)
-                            ),
-                            filled: true,
-                            fillColor: const Color.fromARGB(255, 254, 246, 215),
-                            hintText: "Ideal Speed"),
-    ),
-                      //  ),
-
-                     ],
-                    ),
-                    Row(
-                      //add second row with returned data value here
-                    )
-                    ],
-              ),*/
           ],
         ),
+
       ),
     );
   }
