@@ -27,16 +27,15 @@ class _LoginPageState extends State<LoginPage> {
       // ),
 
       body: Container(
-        margin: EdgeInsets.fromLTRB(30, 25, 30, 50),
+        margin: EdgeInsets.fromLTRB(30, 30, 30, 0),
 
         child: Stack(
           children: <Widget>[
             Column(
                 children:<Widget>[
 
-                  SizedBox(height: 30),
 
-                  //Image.asset('assets/images/logo2.png'),
+                  Image.asset('assets/images/logo3.png'),
 
                   Container(
                     child: Align(
@@ -67,7 +66,7 @@ class _LoginPageState extends State<LoginPage> {
             Column(
               children: <Widget>[
 
-                SizedBox(height: 210),
+                SizedBox(height: 320),
 
                 Container(
                   child: Align(
@@ -97,7 +96,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
 
-                SizedBox(height: 50),
+                SizedBox(height: 30),
 
                 Container(
                   child: Align(
@@ -156,7 +155,7 @@ class _LoginPageState extends State<LoginPage> {
                     ]
                 ),
 
-                SizedBox(height: 150),
+                SizedBox(height: 80),
 
                 Row(
                     children: [

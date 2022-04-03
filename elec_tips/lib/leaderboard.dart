@@ -10,7 +10,9 @@ class _LeaderboardPageState extends State<LeaderboardPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 88, 89, 91),
       body: Center(
+
         child: Column(
             children: <Widget>[
        Container(
@@ -18,7 +20,7 @@ class _LeaderboardPageState extends State<LeaderboardPage> {
 
             child: const Text(
                 'Leaderboard',
-                style: TextStyle (fontSize: 40, fontFamily: "Martel", fontWeight: FontWeight.bold)
+                style: TextStyle (fontSize: 40, fontFamily: "Martel", fontWeight: FontWeight.bold, color: Colors.white)
             ),
 
           ),
@@ -46,7 +48,7 @@ class _LeaderboardPageState extends State<LeaderboardPage> {
                   ),
                   //child: Material(
                       child: ListTile(
-                        title:Text("Grace",   style: TextStyle(fontSize: 20, fontFamily: "Martel")) ,
+                        title:Text("Grace",   style: TextStyle(fontSize: 20, fontFamily: "Martel", fontWeight: FontWeight.bold)) ,
 
                       )
                  // ),

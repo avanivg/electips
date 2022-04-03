@@ -25,13 +25,15 @@ class _SignupPageState extends State<SignupPage> {
       // ),
 
       body: Container(
-        margin: EdgeInsets.fromLTRB(30, 25, 30, 50),
+        margin: EdgeInsets.fromLTRB(30, 25, 30, 20),
 
         child: Stack(
           children: <Widget>[
+            Image.asset('assets/images/logo3.png'),
+
             Column(
                 children:<Widget>[
-                  SizedBox(height: 50),
+                  SizedBox(height: 200),
 
                   Container(
                     child: Align(
@@ -45,7 +47,7 @@ class _SignupPageState extends State<SignupPage> {
             Column(
               children: <Widget>[
 
-                SizedBox(height: 200),
+                SizedBox(height: 300),
 
                 Container(
                   child: Align(
@@ -105,7 +107,7 @@ class _SignupPageState extends State<SignupPage> {
 
 
 
-                SizedBox(height: 150),
+                SizedBox(height: 110),
 
                 Row(
                     children: [

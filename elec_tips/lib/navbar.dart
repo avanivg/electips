@@ -27,8 +27,8 @@ class _NavbarPageState extends State<NavbarPage> {
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
         unselectedIconTheme: IconThemeData(color: Color.fromARGB(255, 0, 0, 0)),
-        unselectedLabelStyle: TextStyle(color: Color.fromARGB(255, 0, 0, 0), fontFamily: "Martel", fontWeight: FontWeight.bold ), // FIGURE THIS OUT
-
+        unselectedLabelStyle: TextStyle(color: Color.fromARGB(255, 0, 0, 0), fontFamily: "Martel", fontWeight: FontWeight.bold ),
+        selectedLabelStyle: TextStyle(color: Color.fromARGB(255, 0, 0, 0), fontFamily: "Martel"),
         backgroundColor: Color.fromARGB(255, 176, 7, 21),
 
 
@@ -44,7 +44,7 @@ class _NavbarPageState extends State<NavbarPage> {
             icon: Icon(Icons.add_location_outlined,
               //color: Color.fromARGB(255, 28, 49, 68),
             ),
-            label: 'My trips',
+            label: 'My Trips',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.auto_graph_sharp,

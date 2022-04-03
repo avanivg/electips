@@ -16,9 +16,7 @@ class _TripsPageState extends State<TripsPage> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-          title: Text('Testing Trips')
-      ),
+
       body: Center(
         child: StreamBuilder (
             stream: distance.snapshots(),
@@ -28,12 +26,30 @@ class _TripsPageState extends State<TripsPage> {
                 return Center(child: Text('Loading'));
               }
               return ListView(
+                padding: EdgeInsets.all(12),
                 children: snapshot.data!.docs.map((dist) {
                   return Center(
                     child: ListTile(
-                      title: Text('Travel Distance'),
-                      leading: Text(dist['tripName']),
-                      subtitle: Text(dist['totalMiles']),
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)),
+                      tileColor: Color.fromARGB(255, 88, 89, 91),
+                      title: Text('Travel Distance',
+                        style: TextStyle(
+                          fontFamily: "Martel",
+                          fontSize: 14,
+                        ),
+                      ),
+                      leading: Text(dist['tripName'],
+                        style: TextStyle(
+                          fontFamily: "Martel",
+                          fontSize: 14,
+                        ),
+                      ),
+                      subtitle: Text(dist['totalMiles'],
+                        style: TextStyle(
+                          fontFamily: "Martel",
+                          fontSize: 14,
+                        ),
+                      ),
                       onLongPress: () {
                         dist.reference.delete();
                       }

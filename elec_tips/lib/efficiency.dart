@@ -18,7 +18,7 @@ class _EfficiencyPageState extends State<EfficiencyPage> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+      backgroundColor: const Color.fromARGB(255, 88, 89, 91),
       body: Center(
         child: Stack(
           children: <Widget>[
@@ -29,7 +29,7 @@ class _EfficiencyPageState extends State<EfficiencyPage> {
                   padding: const EdgeInsets.all(25),
                   child: const Text(
                       'Calculate your savings!',
-                      style: TextStyle(color: Color.fromARGB(255, 0, 0, 0), fontSize: 30, fontFamily: "Martel", fontWeight: FontWeight.bold, ),
+                      style: TextStyle(color: Color.fromARGB(255, 255, 255, 255), fontSize: 30, fontFamily: "Martel", fontWeight: FontWeight.bold, ),
                       textAlign: TextAlign.center ),
 
 
@@ -49,9 +49,9 @@ class _EfficiencyPageState extends State<EfficiencyPage> {
                           borderRadius: BorderRadius.circular(20.0)
                       ),
                       filled: true,
-                      fillColor: const Color.fromARGB(255, 88, 89, 91),
+                      fillColor: const Color.fromARGB(255, 255, 255, 255),
                       hintText: 'Trip name',
-                      hintStyle: TextStyle(fontSize: 14.0, color: Color.fromARGB(255, 204, 204, 204)),
+                      hintStyle: TextStyle(fontSize: 14.0,fontFamily: "Martel", color: Color.fromARGB(255, 0, 0, 0)),
                     ),
                   ),
                 ),
@@ -68,9 +68,9 @@ class _EfficiencyPageState extends State<EfficiencyPage> {
                           borderRadius: BorderRadius.circular(20.0)
                       ),
                       filled: true,
-                      fillColor: const Color.fromARGB(255, 88, 89, 91),
+                      fillColor: const Color.fromARGB(255, 255, 255, 255),
                       hintText: "Trip distance in miles",
-                      hintStyle: TextStyle(fontSize: 14.0, color: Color.fromARGB(255, 204, 204, 204)),
+                      hintStyle: TextStyle(fontSize: 14.0, fontFamily: "Martel", color: Color.fromARGB(255, 0, 0, 0)),
                     ),
                     enabled: true,
                   ),
