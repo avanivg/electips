@@ -25,6 +25,7 @@ class _NavbarPageState extends State<NavbarPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
         currentIndex: _selectedIndex,
         unselectedIconTheme: IconThemeData(color: Color.fromARGB(255, 0, 0, 0)),
         unselectedLabelStyle: TextStyle(color: Color.fromARGB(255, 0, 0, 0), fontFamily: "Martel", fontWeight: FontWeight.bold ),

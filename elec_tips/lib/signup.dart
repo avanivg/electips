@@ -18,6 +18,7 @@ class _SignupPageState extends State<SignupPage> {
   Widget build(BuildContext context) {
     User? user = FirebaseAuth.instance.currentUser;
     return Scaffold(
+      resizeToAvoidBottomInset : false,
       backgroundColor: const Color.fromARGB(255, 88, 89, 91),
 
       // appBar: AppBar(

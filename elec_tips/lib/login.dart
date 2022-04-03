@@ -19,6 +19,7 @@ class _LoginPageState extends State<LoginPage> {
     User? user = FirebaseAuth.instance.currentUser;
 
     return Scaffold(
+      resizeToAvoidBottomInset : false,
 
       backgroundColor: const Color.fromARGB(255, 88, 89, 91),
 

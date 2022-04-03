@@ -18,6 +18,7 @@ class _EfficiencyPageState extends State<EfficiencyPage> {
 
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset : false,
       backgroundColor: const Color.fromARGB(255, 88, 89, 91),
       body: Center(
         child: Stack(

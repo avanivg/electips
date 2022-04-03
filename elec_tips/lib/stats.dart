@@ -11,6 +11,7 @@ class _StatsPageState extends State<StatsPage>  {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset : false,
       backgroundColor: const Color.fromARGB(255, 88, 89, 91),
       body: Center(
         child: Stack(
@@ -136,7 +137,7 @@ class _StatsPageState extends State<StatsPage>  {
                               )),
 
                           onPressed: () {
-                            Navigator.pushNamed(context, '/trips');
+                            Navigator.pushNamed(context, '/navbar');
                             setState(() {});
                           }),
                     )

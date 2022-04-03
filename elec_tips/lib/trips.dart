@@ -16,7 +16,33 @@ class _TripsPageState extends State<TripsPage> {
 
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+          bottomOpacity: 0.0,
+          toolbarHeight: 100,
+          elevation: 0.0,
+        backgroundColor: Color.fromARGB(255, 255, 255, 255),
+        flexibleSpace: Container(
+        color: Color.fromARGB(255, 255, 255, 255),
+    child: Column(
+    children: [
+      SizedBox(height:70),
+    Container(
 
+
+    color: Color.fromARGB(255, 255, 255, 255),
+
+    ),
+    Align(
+    alignment: Alignment.center,
+    child: Text('Contact Book',
+    style: TextStyle(
+    color: Color.fromARGB(255, 0, 0, 0),
+    fontSize: 30.0,
+    fontWeight: FontWeight.bold,
+    fontFamily: 'Martel',
+    ),
+    ),
+    )]))),
       body: Center(
         child: StreamBuilder (
             stream: distance.snapshots(),
@@ -26,33 +52,36 @@ class _TripsPageState extends State<TripsPage> {
                 return Center(child: Text('Loading'));
               }
               return ListView(
-                padding: EdgeInsets.all(12),
+                itemExtent: 85.0,
+                padding: EdgeInsets.only(top: 0, right: 20, left: 20, bottom: 40),
                 children: snapshot.data!.docs.map((dist) {
                   return Center(
                     child: ListTile(
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)),
-                      tileColor: Color.fromARGB(255, 88, 89, 91),
-                      title: Text('Travel Distance',
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25.0)),
+                        tileColor: Color.fromARGB(255, 88, 89, 91),
+                        title: Text(dist['tripName'],
+                          style: TextStyle(
+                            fontFamily: "Martel",
+                            fontSize: 14,
+                            color: Colors.white,
+                          ),
+                        ),
+                        /*leading: Text(dist['tripName'],
                         style: TextStyle(
                           fontFamily: "Martel",
                           fontSize: 14,
                         ),
-                      ),
-                      leading: Text(dist['tripName'],
-                        style: TextStyle(
-                          fontFamily: "Martel",
-                          fontSize: 14,
+                      ),*/
+                        subtitle: Text(dist['totalMiles'],
+                          style: TextStyle(
+                            fontFamily: "Martel",
+                            fontSize: 14,
+                            color: Colors.white,
+                          ),
                         ),
-                      ),
-                      subtitle: Text(dist['totalMiles'],
-                        style: TextStyle(
-                          fontFamily: "Martel",
-                          fontSize: 14,
-                        ),
-                      ),
-                      onLongPress: () {
-                        dist.reference.delete();
-                      }
+                        onLongPress: () {
+                          dist.reference.delete();
+                        }
                     ),
                   );
                 }).toList(),
@@ -63,4 +92,3 @@ class _TripsPageState extends State<TripsPage> {
     );
   }
 }
-
