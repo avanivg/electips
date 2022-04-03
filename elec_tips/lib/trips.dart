@@ -18,7 +18,7 @@ class _TripsPageState extends State<TripsPage> {
     return Scaffold(
       appBar: AppBar(
           bottomOpacity: 0.0,
-          toolbarHeight: 100,
+          toolbarHeight: 70,
           elevation: 0.0,
         backgroundColor: Color.fromARGB(255, 255, 255, 255),
         flexibleSpace: Container(
@@ -34,7 +34,7 @@ class _TripsPageState extends State<TripsPage> {
     ),
     Align(
     alignment: Alignment.center,
-    child: Text('Contact Book',
+    child: Text('My Trips',
     style: TextStyle(
     color: Color.fromARGB(255, 0, 0, 0),
     fontSize: 30.0,

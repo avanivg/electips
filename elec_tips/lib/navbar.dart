@@ -36,10 +36,10 @@ class _NavbarPageState extends State<NavbarPage> {
 
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.speed_sharp,
+            icon: Icon(Icons.attach_money_sharp,
               //color: Color.fromARGB(255, 28, 49, 68),
             ),
-            label: 'Efficiency',
+            label: 'Savings',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.add_location_outlined,

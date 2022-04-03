@@ -20,16 +20,16 @@ class _EfficiencyPageState extends State<EfficiencyPage> {
     return Scaffold(
       resizeToAvoidBottomInset : false,
       backgroundColor: const Color.fromARGB(255, 88, 89, 91),
-      body: Center(
+      body: SingleChildScrollView(
         child: Stack(
           children: <Widget>[
             Column(
               children:<Widget>[
-                const SizedBox(height: 50),
+                const SizedBox(height: 80),
                 Container(
                   padding: const EdgeInsets.all(25),
                   child: const Text(
-                      'Calculate your savings!',
+                      'Calculate your savings',
                       style: TextStyle(color: Color.fromARGB(255, 255, 255, 255), fontSize: 30, fontFamily: "Martel", fontWeight: FontWeight.bold, ),
                       textAlign: TextAlign.center ),
 
@@ -77,7 +77,7 @@ class _EfficiencyPageState extends State<EfficiencyPage> {
                   ),
                 ),
 
-                SizedBox(height:180),
+                SizedBox(height:170),
                 ElevatedButton(child: Text('Calculate Stats',
                   style: TextStyle(fontFamily: "Martel", color: Color.fromARGB(255, 255, 255, 255), fontSize: 20, fontWeight: FontWeight.bold),
                 ),

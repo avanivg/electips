@@ -17,16 +17,16 @@ class _LeaderboardPageState extends State<LeaderboardPage> {
         child: Column(
             children: <Widget>[
               Container(
-                padding: const EdgeInsets.only(top: 40),
+                padding: const EdgeInsets.only(top: 60),
 
                 child: const Text(
                     'Leaderboard',
-                    style: TextStyle (fontSize: 40, fontFamily: "Martel", fontWeight: FontWeight.bold, color: Colors.white)
+                    style: TextStyle (fontSize: 30, fontFamily: "Martel", fontWeight: FontWeight.bold, color: Colors.white)
                 ),
 
               ),
               Container(
-                  margin: EdgeInsets.fromLTRB(20, 10, 20, 20),
+                  margin: EdgeInsets.fromLTRB(20, 10, 20, 0),
                   width: 325,
                   height: 595,
                   decoration: const BoxDecoration(
@@ -49,7 +49,7 @@ class _LeaderboardPageState extends State<LeaderboardPage> {
                               ),
                               //child: Material(
                               child: ListTile(
-                                title:Text("Grace \t\t\t\t \t\t \t\t \t\t \t\t \t\t  \$74.66",   style: TextStyle(fontSize: 20, fontFamily: "Martel", fontWeight: FontWeight.bold)) ,
+                                title:Text("Grace \t\t\t\t \t\t \t\t \t\t \t\t \t\t  \$62.86",   style: TextStyle(fontSize: 20, fontFamily: "Martel", fontWeight: FontWeight.bold)) ,
 
                               )
                             // ),
@@ -63,7 +63,7 @@ class _LeaderboardPageState extends State<LeaderboardPage> {
                             ),
                             //child: Material(
                             child: ListTile(
-                              title: Text("Aaron \t\t\t\t \t\t \t\t \t\t \t\t \t\t  \$62.86",   style: TextStyle(fontSize: 20, fontFamily: "Martel")),
+                              title: Text("Aaron \t\t\t\t \t\t \t\t \t\t \t\t \t\t  \$54.20",   style: TextStyle(fontSize: 20, fontFamily: "Martel")),
                             ),
                             // ),
                           ),
@@ -76,7 +76,7 @@ class _LeaderboardPageState extends State<LeaderboardPage> {
                                 borderRadius: BorderRadius.circular(10),
                               ),
                               child: ListTile(
-                                title: Text("Shagun \t\t\t\t \t\t \t\t \t\t \t\t\t \$61.42",   style: TextStyle(fontSize: 20, fontFamily: "Martel")),
+                                title: Text("Shagun \t\t\t\t \t\t \t\t \t\t \t\t\t \$50.75",   style: TextStyle(fontSize: 20, fontFamily: "Martel")),
                               )
                             //  ),
                           ),
@@ -91,7 +91,7 @@ class _LeaderboardPageState extends State<LeaderboardPage> {
                                 borderRadius: BorderRadius.circular(10),
                               ),
                               child: ListTile(
-                                title: Text("Rohan \t\t\t\t \t\t \t\t \t\t \t\t \t\t  \$55.01",   style: TextStyle(fontSize: 20, fontFamily: "Martel")),
+                                title: Text("Rohan \t\t\t\t \t\t \t\t \t\t \t\t \t\t  \$44.50",   style: TextStyle(fontSize: 20, fontFamily: "Martel")),
                               )
                             //),
                           ),
@@ -105,7 +105,7 @@ class _LeaderboardPageState extends State<LeaderboardPage> {
                                 borderRadius: BorderRadius.circular(10),
                               ),
                               child: ListTile(
-                                title: Text("Mireya \t\t\t\t \t\t \t\t \t\t \t\t\t  \$47.99",   style: TextStyle(fontSize: 20, fontFamily: "Martel")),
+                                title: Text("Mireya \t\t\t\t \t\t \t\t \t\t \t\t\t  \$39.99",   style: TextStyle(fontSize: 20, fontFamily: "Martel")),
                               )
                             // ),
                           ),
@@ -119,7 +119,7 @@ class _LeaderboardPageState extends State<LeaderboardPage> {
                                 borderRadius: BorderRadius.circular(10),
                               ),
                               child: ListTile(
-                                title: Text("Shreya \t\t\t\t \t\t \t\t \t\t \t\t    \$43.28",   style: TextStyle(fontSize: 20, fontFamily: "Martel")),
+                                title: Text("Shreya \t\t\t\t \t\t \t\t \t\t \t\t    \$37.28",   style: TextStyle(fontSize: 20, fontFamily: "Martel")),
                               )
                             // ),
                           ),
@@ -131,7 +131,7 @@ class _LeaderboardPageState extends State<LeaderboardPage> {
                                 borderRadius: BorderRadius.circular(10),
                               ),
                               child: ListTile(
-                                title: Text("Avani \t\t\t\t \t\t \t\t \t\t \t\t \t\t  \$40.83",   style: TextStyle(fontSize: 20, fontFamily: "Martel")),
+                                title: Text("Avani \t\t\t\t \t\t \t\t \t\t \t\t \t\t  \$35.83",   style: TextStyle(fontSize: 20, fontFamily: "Martel")),
                               )
                             // ),
                           ),
