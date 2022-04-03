@@ -23,7 +23,9 @@ class _LoginPageState extends State<LoginPage> {
           title: Text('User is (Logged ' + (user == null ? 'out' : 'in') + ')'),
       ),
       body: Center(
-            child: Column(
+            child: Stack(
+              children: <Widget>[
+            Column(
               children: [
                 TextField(controller: emailController),
                 TextField(controller: passwordController),
@@ -63,9 +65,9 @@ class _LoginPageState extends State<LoginPage> {
                 )
               ],
             ),
-
+],
      ),
-
+      ),
     );
   }
 }
