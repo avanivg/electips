@@ -31,7 +31,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  auto_size_text_field: ^1.0.1
 
 
   # The following adds the Cupertino Icons font to your application.
