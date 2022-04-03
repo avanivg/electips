@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 class TripsPage extends StatefulWidget {
   const TripsPage({Key? key}) : super(key: key);
@@ -8,24 +10,31 @@ class TripsPage extends StatefulWidget {
 }
 
 class _TripsPageState extends State<TripsPage> {
-
   @override
+  CollectionReference distance = FirebaseFirestore.instance.collection('distance');
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-
+          title: Text('Testing Trips')
       ),
       body: Center(
-
-        child: Column(
-
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              const Text(
-                'You have pushed the button this many times:',
-              ),
-
-            ]),
+        child: StreamBuilder (
+            stream: distance.snapshots(),
+            builder: (context, AsyncSnapshot<QuerySnapshot> snapshot) {
+              if (!snapshot.hasData) {
+                //loading screen
+                return Center(child: Text('Loading'));
+              }
+              return ListView(
+                children: snapshot.data!.docs.map((dist) {
+                  return Center(
+                    child: ListTile(
+                      title: Text(dist['tripName']),
+                    ),
+                  );
+                }).toList(),
+              );
+            }),
       ),
 
     );

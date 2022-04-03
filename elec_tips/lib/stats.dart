@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 class StatsPage extends StatefulWidget {
   const StatsPage({Key? key}) : super(key: key);
@@ -61,6 +63,7 @@ class _StatsPageState extends State<StatsPage> {
                   enabled: true,
                 ),
                 ),*/
+
                 Container(
                   margin: const EdgeInsets.only(right: 50, left: 50),
                   padding: const EdgeInsets.all(15),

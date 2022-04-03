@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 class EfficiencyPage extends StatefulWidget {
   const EfficiencyPage({Key? key}) : super(key: key);
@@ -8,8 +10,12 @@ class EfficiencyPage extends StatefulWidget {
 }
 
 class _EfficiencyPageState extends State<EfficiencyPage> {
-
   @override
+  final textController = TextEditingController();
+  final tripNameController = TextEditingController();
+  CollectionReference distance = FirebaseFirestore.instance.collection('distance');
+  //final textcontroller = TextEditingController();
+
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 220, 233, 196),
@@ -31,6 +37,7 @@ class _EfficiencyPageState extends State<EfficiencyPage> {
          padding: const EdgeInsets.all(15),
         alignment: const Alignment( 2.0, 3.0),
         child: TextField(
+          controller: tripNameController,
           enabled: true,
           decoration: InputDecoration(
               contentPadding: const EdgeInsets.all(15.0),
@@ -68,6 +75,7 @@ class _EfficiencyPageState extends State<EfficiencyPage> {
                 padding: const EdgeInsets.all(15),
                 alignment: Alignment( 0.0, 5.0),
                 child: TextField(
+                  controller: textController,
                   maxLines: 1,
                   decoration: InputDecoration(
                       contentPadding: EdgeInsets.all(15.0),
@@ -82,6 +90,10 @@ class _EfficiencyPageState extends State<EfficiencyPage> {
               ),
               ElevatedButton(child: Text('Calculate Stats'),
                   onPressed: ()  {
+                    distance.add({
+                      "totalMiles": textController.text,
+                      "tripName": tripNameController.text
+                    });
                     Navigator.pushNamed(context, '/stats');
                     setState(() {
                     });
