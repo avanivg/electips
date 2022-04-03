@@ -1,3 +1,5 @@
+## ElecTips
+Get electric with ElecTips!
 ## Inspiration
 We were inspired to build this app for Toyota's challenge at WE Hack 2022. We feel passionately about alternative sources of energy and improving transportation for all, especially in a large metropolis like the DFW area.
 ## What it does
