@@ -1,3 +1,4 @@
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 class StatsPage extends StatefulWidget {
@@ -11,7 +12,7 @@ class _StatsPageState extends State<StatsPage>  {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 220, 233, 196),
+      backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       body: Center(
         child: Stack(
           children: <Widget>[
@@ -23,7 +24,7 @@ class _StatsPageState extends State<StatsPage>  {
                     child: Center(
                       child: const Text(
 
-                        'Here are your efficiency stats: ',
+                        'Here are your cost saving stats: ',
                         textAlign: TextAlign.center,
                         style: TextStyle(fontSize: 25, fontFamily: "Martel"),
 
@@ -66,7 +67,7 @@ class _StatsPageState extends State<StatsPage>  {
                       color: Color.fromARGB(255, 254, 246, 215),
                       shape: BoxShape.rectangle,
                       borderRadius: BorderRadius.only(
-                          topRight: Radius.circular(150),
+                        //topRight: Radius.circular(150),
                           bottomRight: Radius.circular(150),
                           bottomLeft: Radius.circular(150))),
                 ),
@@ -79,7 +80,7 @@ class _StatsPageState extends State<StatsPage>  {
                       Align(
                         alignment: Alignment.topCenter,
                         child: Text(
-                          "Efficiency points... ",
+                          "Cost savings... ",
                           style: TextStyle(fontSize: 20, fontFamily: "Martel"),
                         ),
                       ),
@@ -105,7 +106,8 @@ class _StatsPageState extends State<StatsPage>  {
                       color: Color.fromARGB(255, 254, 246, 215),
                       shape: BoxShape.rectangle,
                       borderRadius: BorderRadius.only(
-                          topRight: Radius.circular(150),
+                          topLeft: Radius.circular(0),
+                          topRight: Radius.circular(0),
                           bottomRight: Radius.circular(150),
                           bottomLeft: Radius.circular(150))),
                 ),
@@ -114,21 +116,21 @@ class _StatsPageState extends State<StatsPage>  {
                     child: SizedBox(
                       width: 120,
                       height: 60,
-                      child: ElevatedButton(
-                          style: ElevatedButton.styleFrom(
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20)
-                            ),
-                            primary: const Color.fromARGB(255, 176, 7, 21),
-                          ),
-                          child: const Text('Add trip',
-                              style: TextStyle(
-                                  fontSize: 21, fontFamily: "Martel", color: Color.fromARGB(255,255,255,255)
-                              )),
-
-                          onPressed: () {
-                            setState(() {});
-                          }),
+                      // child: ElevatedButton(
+                      //     style: ElevatedButton.styleFrom(
+                      //       shape: RoundedRectangleBorder(
+                      //           borderRadius: BorderRadius.circular(20)
+                      //       ),
+                      //       primary: const Color.fromARGB(255, 176, 7, 21),
+                      //     ),
+                      //     child: const Text('Add trip',
+                      //         style: TextStyle(
+                      //             fontSize: 21, fontFamily: "Martel", color: Color.fromARGB(255,255,255,255)
+                      //         )),
+                      //
+                      //     onPressed: () {
+                      //       setState(() {});
+                      //     }),
                     )
 
                 )

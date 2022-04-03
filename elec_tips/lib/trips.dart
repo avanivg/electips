@@ -12,6 +12,8 @@ class TripsPage extends StatefulWidget {
 class _TripsPageState extends State<TripsPage> {
   @override
   CollectionReference distance = FirebaseFirestore.instance.collection('distance');
+
+
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -29,7 +31,12 @@ class _TripsPageState extends State<TripsPage> {
                 children: snapshot.data!.docs.map((dist) {
                   return Center(
                     child: ListTile(
-                      title: Text(dist['tripName']),
+                      title: Text('Travel Distance'),
+                      leading: Text(dist['tripName']),
+                      subtitle: Text(dist['totalMiles']),
+                      onLongPress: () {
+                        dist.reference.delete();
+                      }
                     ),
                   );
                 }).toList(),

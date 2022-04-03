@@ -18,116 +18,93 @@ class _EfficiencyPageState extends State<EfficiencyPage> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 220, 233, 196),
+      backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       body: Center(
         child: Stack(
           children: <Widget>[
-        Column(
-            children:<Widget>[
-              const SizedBox(height: 50),
-        Container(
-          padding: const EdgeInsets.all(15),
-              child: const Text(
-                'Calculate your efficiency!',
-                style: TextStyle (fontSize: 25),
-          ),
-      ),
-     Container( //current location
-       margin: const EdgeInsets.only(right: 50, left: 50),
-         padding: const EdgeInsets.all(15),
-        alignment: const Alignment( 2.0, 3.0),
-        child: TextField(
-          controller: tripNameController,
-          enabled: true,
-          decoration: InputDecoration(
-              contentPadding: const EdgeInsets.all(15.0),
-              border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10.0)
-              ),
-              filled: true,
-              fillColor: const Color.fromARGB(255, 254, 246, 215),
-            hintText: 'Trip name'
-          ),
-      ),
-      ),
-              Container(
-                margin: const EdgeInsets.only(right: 50, left: 50),
-                padding: const EdgeInsets.all(15),
-                alignment: Alignment( 0.0, 5.0),
-                child: TextField(
-                  controller: textController,
-                  maxLines: 1,
-                  decoration: InputDecoration(
-                      contentPadding: EdgeInsets.all(15.0),
+            Column(
+              children:<Widget>[
+                const SizedBox(height: 50),
+                Container(
+                  padding: const EdgeInsets.all(25),
+                  child: const Text(
+                      'Calculate your savings!',
+                      style: TextStyle(color: Color.fromARGB(255, 0, 0, 0), fontSize: 30, fontFamily: "Martel", fontWeight: FontWeight.bold, ),
+                      textAlign: TextAlign.center ),
+
+
+                ),
+
+                SizedBox(height: 100),
+                Container( //current location
+                  margin: const EdgeInsets.only(right: 25, left: 25),
+                  padding: const EdgeInsets.all(15),
+                  alignment: const Alignment( 2.0, 3.0),
+                  child: TextField(
+                    controller: tripNameController,
+                    enabled: true,
+                    decoration: InputDecoration(
+                      contentPadding: const EdgeInsets.all(15.0),
                       border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10.0)
+                          borderRadius: BorderRadius.circular(20.0)
                       ),
                       filled: true,
-                      fillColor: const Color.fromARGB(255, 254, 246, 215),
-                      hintText: "Trip distance in miles"),
-                  enabled: true,
-                ),
-              ),
-              ElevatedButton(child: Text('Calculate Stats'),
-                  onPressed: ()  {
-                    distance.add({
-                      "totalMiles": textController.text,
-                      "tripName": tripNameController.text
-                    });
-                    Navigator.pushNamed(context, '/stats');
-                    setState(() {
-                    });
-
-                  }),
-
-            ],
-      ),
-            /*
-            TextField(
-
-              maxLines: 1,
-              decoration: InputDecoration(
-                //contentPadding: EdgeInsets.all(15.0),
-                  border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10.0)
-                  ),
-                  filled: true,
-                  fillColor: const Color.fromARGB(255, 254, 246, 215),
-                  hintText: "Ideal Speed"),
-            ),
-            Column( //ideal speed
-                  children:/* <Widget>*/[
-                   // const SizedBox(height: 10),
-                    Row (
-                     children: /*<Widget>*/[/*
-                     Container(
-                        margin: const EdgeInsets.only(right: 50, left: 50),
-                        padding: const EdgeInsets.all(15),
-                        alignment: Alignment( 0.0, 5.0),*/
-                        TextField(
-
-                            maxLines: 1,
-                            decoration: InputDecoration(
-                            //contentPadding: EdgeInsets.all(15.0),
-                            border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(10.0)
-                            ),
-                            filled: true,
-                            fillColor: const Color.fromARGB(255, 254, 246, 215),
-                            hintText: "Ideal Speed"),
-    ),
-                      //  ),
-
-                     ],
+                      fillColor: const Color.fromARGB(255, 88, 89, 91),
+                      hintText: 'Trip name',
+                      hintStyle: TextStyle(fontSize: 14.0, color: Color.fromARGB(255, 204, 204, 204)),
                     ),
-                    Row(
-                      //add second row with returned data value here
-                    )
-                    ],
-              ),*/
+                  ),
+                ),
+                Container(
+                  margin: const EdgeInsets.only(right: 25, left: 25),
+                  padding: const EdgeInsets.all(15),
+                  alignment: Alignment( 0.0, 5.0),
+                  child: TextField(
+                    controller: textController,
+                    maxLines: 1,
+                    decoration: InputDecoration(
+                      contentPadding: EdgeInsets.all(15.0),
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(20.0)
+                      ),
+                      filled: true,
+                      fillColor: const Color.fromARGB(255, 88, 89, 91),
+                      hintText: "Trip distance in miles",
+                      hintStyle: TextStyle(fontSize: 14.0, color: Color.fromARGB(255, 204, 204, 204)),
+                    ),
+                    enabled: true,
+                  ),
+                ),
+
+                SizedBox(height:180),
+                ElevatedButton(child: Text('Calculate Stats',
+                  style: TextStyle(fontFamily: "Martel", color: Color.fromARGB(255, 255, 255, 255), fontSize: 20, fontWeight: FontWeight.bold),
+                ),
+                    style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20)
+                      ),
+                      primary: const Color.fromARGB(255, 176, 7, 21),
+                      fixedSize: const Size(320, 50),
+                    ),
+                    onPressed: ()  {
+                      distance.add({
+                        "totalMiles": textController.text,
+                        "tripName": tripNameController.text
+                      });
+                      Navigator.pushNamed(context, '/stats');
+                      setState(() {
+                      });
+
+                    }
+                ),
+
+              ],
+            ),
+
           ],
         ),
-        ),
+      ),
 
     );
   }

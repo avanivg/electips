@@ -1,4 +1,5 @@
 import 'package:elec_tips/efficiency.dart';
+import 'package:elec_tips/stats.dart';
 import 'package:flutter/material.dart';
 import 'package:elec_tips/leaderboard.dart';
 import 'package:elec_tips/trips.dart';
@@ -23,13 +24,12 @@ class _NavbarPageState extends State<NavbarPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 220, 233, 196),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
-        unselectedIconTheme: IconThemeData(color: Color.fromARGB(255, 28, 49, 68)),
-        unselectedLabelStyle: TextStyle(color: Color.fromARGB(255, 28, 49, 68) ), // FIGURE THIS OUT
+        unselectedIconTheme: IconThemeData(color: Color.fromARGB(255, 0, 0, 0)),
+        unselectedLabelStyle: TextStyle(color: Color.fromARGB(255, 0, 0, 0), fontFamily: "Martel", fontWeight: FontWeight.bold ), // FIGURE THIS OUT
 
-        backgroundColor: Color.fromARGB(255, 126, 161, 107),
+        backgroundColor: Color.fromARGB(255, 176, 7, 21),
 
 
 
@@ -65,4 +65,3 @@ class _NavbarPageState extends State<NavbarPage> {
     );
   }
 }
-

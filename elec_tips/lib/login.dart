@@ -174,7 +174,7 @@ class _LoginPageState extends State<LoginPage> {
                           onPressed: () async {
                             Navigator.pushNamed(context, '/navbar');
                             await Firebase.initializeApp();
-                            await FirebaseAuth.instance.createUserWithEmailAndPassword(
+                            await FirebaseAuth.instance.signInWithEmailAndPassword(
                                 email: emailController.text,
                                 password: passwordController.text
                             );
