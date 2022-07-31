@@ -1,7 +1,7 @@
 ## ElecTips
 Get electric with ElecTips!
 ## Inspiration
-We were inspired to build this app for Toyota's challenge at WE Hack 2022. We feel passionately about alternative sources of energy and improving transportation for all, especially in a large metropolis like the DFW area.
+We were inspired to build this app for State Farm's challenge at WE Hack 2022. We feel passionately about alternative sources of energy and improving transportation for all, especially in a large metropolis like the DFW area.
 ## What it does
 ElecTips encourages motorists to make the switch to electric vehicles by promoting a sense of community among drivers of electric vehicles. Users can input the distance they are traveling to calculate the ideal speed to drive at for perfect energy efficiency. Users can also compete with their peers via the Leaderboard to see who is the savviest driver. ElecTips also calculates costs saved by driving an electric vehicle versus a traditional petroleum vehicle.
 ## How we built it
